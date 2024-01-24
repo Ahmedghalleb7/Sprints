@@ -12,6 +12,46 @@ function createCounter() {
   let ahmedcounter =createCounter()
   let sabrinecounter= createCounter()
   
+  //& Data Modeling || W3.D05
+// &Exercises 
+
+// & EXTENTED 1.
+//  As we did before, think about what kinds of aspects of movies you would like to represent. A few ideas are:
+//  Title ,Director ,Duration ,Release Date ,Actors/Actresses ,Studio(s) ,Synopsis ,Rating
+
+let movie = (Title,Director,Duration,ReleaseDate,Actors,Studios,Synopsis,Rating)=>{
+    return{
+        Title:Title,
+        Director:Director,
+        Duration:Duration,
+        ReleaseDate:ReleaseDate,
+        // Actors:Actors,
+        Studios:Studios,
+        Rating:Rating
+
+    }
+}
+let Spiderman=movie("Spider-Man: Across the Spider-Verse"," Joaquim Dos Santos/ Kemp Powers / Justin K. Thompson","2h 20m","June 2, 2023","Sony Pictures Releasing","4.3")
+
+let addprop =(movie,prop,newprop)=>{
+
+    movie[prop]=newprop
+}
+// Exemple of property adding
+// (Spiderman,actors,[	
+//     "Shameik Moore",
+//     "Hailee Steinfeld",
+//     "Brian Tyree Henry",
+//     "Lauren Vélez",
+//     "Jake Johnson",
+//     "Jason Schwartzman",
+//     "Issa Rae",
+//     "Karan Soni",
+//     "Shea Whigham",
+//     "Greta Lee",
+//     "Daniel Kaluuya",
+//     "Mahershala Ali",
+//     "Oscar Isaac"])
 
 //OOP : objext oriented program
   function makeAccount(initial) {
@@ -70,14 +110,19 @@ function makeCat (){
   let cat ={
     tiredness:10,
     hunger:10,
-    
+    lonliness:10,
+    hapiness:0,
+    tiredness:sleep,
+    hunger:feed,
+    lonliness:play,
+    hapiness:pet
   }
 
-    cat.tiredness = sleep,
-    cat.hunger=feed,
-    cat.lonliness=play,
-    cat.hapiness=pet
-    return cat
+    // cat.tiredness = sleep,
+    // cat.hunger=feed,
+    // cat.lonliness=play,
+    // cat.hapiness=pet
+    
 }
 let sleep = function (time) {
   if (this.tiredness-time>0){
