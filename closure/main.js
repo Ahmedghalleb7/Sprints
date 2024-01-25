@@ -106,7 +106,7 @@ let deposit=function(amount){
 // Bonus: Make the functions take arguments that increase or decrease arbitrary amounts
 // Bonus: Make the functions as arbitrary as cats are - sometimes make it so the cat doesn't want to be petted.
 
-function makeCat (){
+function MakeCat (){
   let cat ={
     tiredness:10,
     hunger:10,
@@ -116,7 +116,9 @@ function makeCat (){
     hunger:feed,
     lonliness:play,
     hapiness:pet
+    
   }
+  return cat
 
     // cat.tiredness = sleep,
     // cat.hunger=feed,
