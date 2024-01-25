@@ -9,8 +9,8 @@ function sumOfN(n) {
    for(let i = 0;i<=n;i=i+1){
         result += i
    }
-   return result
- }  
+   return result 
+ } 
 
  //2.Write a function called factorialOfN 
  //that takes a whole number as a parameter 
@@ -25,7 +25,7 @@ function sumOfN(n) {
  }  
 
 
- //3.Write a function called repeatString
+ //?3.Write a function called repeatString
  //that takes two parameters, 
  //as string and a number, and returns 
  //that string the number of times 

@@ -1,6 +1,6 @@
 //ESSENTIAL
-//1.Fix the syntax 
-//& style issues with the three objects below:
+// 1.Fix the syntax & style 
+// issues with the three objects below:
 
 let obj1 = { firstName: 'Yan', lastname: 'Fan' }
 
@@ -12,7 +12,10 @@ let obj3 = {
   type: 'Golden Retriever',
   color: 'Yellow',
 }
-// 2. Create an object that represents you. It should contain your first name, last name, age and hometown. Assign it to a variable called person.
+
+
+//2. Create an object that represents you. It should contain your first name, last name, age and hometown. Assign it to a variable called person.
+
 let person = {
   firstName: "sabrine",
   lastName: "zouaoui",
