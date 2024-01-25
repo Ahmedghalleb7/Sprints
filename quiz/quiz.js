@@ -29,6 +29,7 @@ const quizQuestions = [
 // console.log(document.getElementsByClassName("btn"));
 // console.log(document.getElementsByTagName("p"));
 // console.log(document.querySelector("#answer"));
+// & Vanilla JS:
 var myelement = document.getElementsByClassName("btn")[0]
 // myelement.classList.remove("btn");
 myelement.classList.add("btn-dark");
@@ -36,13 +37,23 @@ myelement.classList.add("btn-dark");
 // create a new <h1> element 
 let i = 0 
 let userscore=0
+let useranswer=document.getElementById("answer")
 let displayquestiontime=()=>{
-  if (i<quizQuestions.length){
-    i++
-    displayquestion() 
-  }
-  else alert("Game Over")
   
+  if (i<quizQuestions.length){
+     
+    console.log(useranswer.value,"1");
+    if (useranswer.value.toUpperCase()==="one piece".toUpperCase() ) {
+      console.log(useranswer.value,"2");
+      alert("Game Over")
+    }
+    useranswer.value=""
+    i++
+    document.getElementById("next").disabled=true
+    displayquestion() 
+    
+  }
+ 
 
 }
 
@@ -55,17 +66,22 @@ let displayquestion=()=>{
   displayquestion()
 
 let answerfunc=()=>{
- let useranswer=document.getElementById("answer").value
-  if (useranswer.toUpperCase()===quizQuestions[i].answer.toUpperCase()){
+  let useranswer=document.getElementById("answer")
+  if (useranswer.value.toUpperCase()===quizQuestions[i].answer.toUpperCase()){
+    
   alert("Great!!!")
+  // verify()
   userscore+=quizQuestions[i].point
   let scoreshow=document.getElementById("score")
     scoreshow.innerText=userscore
+    document.getElementById("next").disabled=false
+    
 }
 
 else alert("Wrong..Try again")
 
 }
+
 
 
 
