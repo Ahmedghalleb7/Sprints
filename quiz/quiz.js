@@ -55,19 +55,7 @@ let userscore=0
 let useranswer=document.getElementById("answer")
 let displayquestiontime=()=>{
   
-  if (i<quizQuestions.length){
-     
-    console.log(useranswer.value,"1");
-    if (useranswer.value.toUpperCase()==="one piece".toUpperCase() ) {
-      console.log(useranswer.value,"2");
-      alert("Game Over")
-    }
-    useranswer.value=""
-    i++
-    document.getElementById("next").disabled=true
-    displayquestion() 
-    
-  }
+  
  
 
 }
@@ -85,6 +73,24 @@ let answerfunc=()=>{
   if (useranswer.value.toUpperCase()===quizQuestions[i].answer.toUpperCase()){
     document.getElementById("yes").play()
   alert("Great!!!")
+// next
+if (i<quizQuestions.length){
+     
+  console.log(useranswer.value,"1");
+  if (useranswer.value.toUpperCase()==="one piece".toUpperCase() ) {
+    console.log(useranswer.value,"2");
+    alert("Game Over")
+  }
+  useranswer.value=""
+  i++
+  document.getElementById("next").disabled=true
+  displayquestion() 
+  
+}
+
+
+
+
   // verify()
   userscore+=quizQuestions[i].point
   let scoreshow=document.getElementById("score")

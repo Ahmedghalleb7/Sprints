@@ -110,17 +110,3 @@ let customerProducts = [
       productCategory: "Shoes"
     }
   ];
-
-
-
-  //1 
-  //map
-  let producsName = customerProducts.map((e,i)=> e.productName)
-  //filter
-  
-  let electronics = customerProducts.filter((e,i)=> e.productCategory === "Electronics").map(e=>e.productName)
-//forEach
-  let forEachs =customerProducts.forEach((e,i)=>e.productPrice/= 2)
-//Reduce
-  let totalAmount = customerProducts.reduce((acc,e)=>acc+e.productPrice,0)+"€"
-
